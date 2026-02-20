@@ -16,14 +16,10 @@ services:
       - key: GROQ_API_KEY
         sync: false
 
-  - type: static
+  - type: static_site
     name: cv-creator-frontend
     env: static
     region: oregon
     plan: free
-    buildCommand: cd frontend && npm install && npm run build
+    buildCommand: cd frontend && npm install && npm run dev
     staticPublishPath: frontend/dist
-    envVars:
-      - key: VITE_API_URL
-        value: https://cv-creator-backend.onrender.com
-        sync: false
