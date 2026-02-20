@@ -21,5 +21,5 @@ services:
     env: static
     region: oregon
     plan: free
-    buildCommand: cd frontend && npm install && npm run dev
+    buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: frontend/dist
