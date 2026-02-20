@@ -15,11 +15,3 @@ services:
         sync: false
       - key: GROQ_API_KEY
         sync: false
-
-  - type: static_site
-    name: cv-creator-frontend
-    env: static
-    region: oregon
-    plan: free
-    buildCommand: cd frontend && npm install && npm run build
-    staticPublishPath: frontend/dist
